@@ -11,6 +11,8 @@ React Component to show animated text and objects, built with [styled-components
 
 The Component provides regular animation for common object and some animation effects especially for typography like letters and multi-line text.
 
+WrapBlock: div (default)
+
 ## Installation
 
 Install via npm:
@@ -21,12 +23,13 @@ npm i react-animate-z
 
  ## Usage
 
-To use react-animate-z in your react project, wrap the content with a `Animate` component and customize the animation with relevant properties.
+To use react-animate-z in your react project,
+wrap the content with a `Animate` component and customize the animation with relevant properties.
 
 ```js
 import Animate from 'react-animate-z'
 
-const DelpiAnimate = () => {
+const Animate = () => {
   return (
     <Animate
       type="blur"
@@ -54,7 +57,7 @@ const DelpiAnimate = () => {
 | `iteration` |   `animation-iteration-count`    | `Number` `String` |   "infinite"   |       -       |
 | `fillMode`  |      `animation-fill-mode`       |     `String`      |     "none"     |       -       |
 
-### Available animations
+### Available animations name (see mapping)
 
 | `type` / Animation name |
 | ----------------------- |
@@ -83,7 +86,6 @@ const DelpiAnimate = () => {
 
 
 ## Chain Animation
-
 An string-arry of animation names is used to wrap the animations you want to chain.
 
 ```js
@@ -93,8 +95,8 @@ const AnimationsForChaining = ["swing", "flipSlowDown", "fadeOutToBottom", "jell
 
 const AnimationChain = () => {
 
-  const [ animationIndex, setAnimationIndex ] = useState(0)
-  const [ animationType, setAnimationType ] = useState(AnimationsForChaining[0])
+  const [animationIndex, setAnimationIndex] = useState(0)
+  const [animationType, setAnimationType] = useState(AnimationsForChaining[0])
 
   const handleChainAnimation = () => {
     setCounter(animationIndex+1)
@@ -117,7 +119,7 @@ const AnimationChain = () => {
 ##### animation type - mapping name
 
 ```js
-// Animation basic mode
+// props: type
 "blur"
 "bounce"
 "effect3D"
@@ -178,7 +180,6 @@ const AnimationChain = () => {
 ##### animation type name: typewriter
 
 ```js
-// Animation typing text - mode
 // import { AnimateTyping } from 'react-animate-z';
 
 <Animate
