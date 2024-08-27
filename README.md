@@ -175,6 +175,12 @@ const AnimationChain = () => {
 "zoomOut"
 "popIn"
 "popOut"
+// 1.0.3
+"rubberBand"
+"jello"
+"wobble"
+"rollIn"
+"jackInTheBox"
 ```
 
 ##### animation type name: typewriter

@@ -1,6 +1,6 @@
 {
     "name": "react-animate-z",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "React hook animate (lib)",
     "main": "build/index.js",
     "module": "build/index.esm.js",
