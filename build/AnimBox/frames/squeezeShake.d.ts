@@ -1,0 +1,12 @@
+export declare const squeezeShakeMap: {
+    squeezeMix: import("styled-components/dist/models/Keyframes").default;
+    squeezeHorizontal: import("styled-components/dist/models/Keyframes").default;
+    squeezeVertical: import("styled-components/dist/models/Keyframes").default;
+    squeezeDiagonal: import("styled-components/dist/models/Keyframes").default;
+    squeezePulse: import("styled-components/dist/models/Keyframes").default;
+    shakeMix: import("styled-components/dist/models/Keyframes").default;
+    shakeHorizontal: import("styled-components/dist/models/Keyframes").default;
+    shakeVertical: import("styled-components/dist/models/Keyframes").default;
+    shakeDiagonal: import("styled-components/dist/models/Keyframes").default;
+    shakeQuick: import("styled-components/dist/models/Keyframes").default;
+};
