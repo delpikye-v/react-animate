@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import type { AnimateType } from './frames';
 export declare const timingMap: {
     readonly linear: "linear";

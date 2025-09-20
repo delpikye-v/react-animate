@@ -44,6 +44,7 @@ yarn add react-animate-z
 ```tsx
 import React from "react";
 import Animate from "react-animate-z";
+import { animGroups, animNames } from "react-animate-z";
 
 export default function App() {
   return (
@@ -54,271 +55,29 @@ export default function App() {
 }
 ```
 
+```tsx
+// 1. Get all animation names
+import { animGroups, animNames } from "react-animate-z";
+
+// 2. Get animation groups
+console.log(animNames);
+console.log(animGroups);
+```
+
 ## 🔧 Props
 
 Prop Type Default Description
 
-| Prop        | Type                   | Default      | Description                                                                              |
-| ----------- | ---------------------- | ------------ | ---------------------------------------------------------------------------------------- |
-| `type`      | `AnimateType`          | `'blurIn'`   | Animation name (ví dụ: `'blurIn'`, `'bounce'`, `'fadeOut'`, ...)                         |
-| `duration`  | `string \| number`     | `'1s'`       | Duration of the animation (can be in seconds `'1s'` or milliseconds `1000`)              |
-| `timing`    | `TimingKey`            | `'ease'`     | Timing function (e.g., `'ease'`, `'linear'`, `'ease-in'`, `'ease-out'`)                  |
-| `delay`     | `string \| number`     | `'0s'`       | Delay before the animation starts                                                        |
-| `iteration` | `number \| "infinite"` | `1`          | Repeat count of the animation                                                            |
-| `direction` | `string`               | `'normal'`   | Animation direction (`'normal'`, `'alternate'`, `'reverse'`, etc.)                       |
-| `fillMode`  | `string`               | `'forwards'` | How styles are applied after animation (`'forwards'`, `'backwards'`, `'both'`, `'none'`) |
-| `tagName`   | `string`               | `'div'`      | Custom HTML tag to render                                                                |
-
----
-
-## 🎨 Available Animations
-
-### 🎾 Bounce
-
-- bounce
-- bounceIn
-- bounceOut
-- bounceElastic
-- bounceSmall
-- bounceRotate
-- bounceJelly
-
-### ✨ Text / Glow Effects
-
-- effect3D
-- neonGlow
-- retro3D
-- emboss
-- fireGlow
-- iceGlow
-- shine
-
-### 🌫 Blur
-
-- blurIn
-- blurInZoom
-- blurInScale
-- blurInUp
-- blurInRotate
-- blurOut
-- blurOutZoom
-- blurOutScale
-- blurOutDown
-- blurOutRotate
-
-### ⚡ Flash
-
-- flash
-- flashIrregular
-- flashFast
-- flashSlow
-- flashPulse
-
-### 🎈 Float
-
-- float
-- floatSway
-- floatHorizontal
-- floatCircular
-- floatWiggle
-
-### 💡 Glow
-
-- glow
-- glowTextFlicker
-- glowRainbow
-- glowBreathing
-- glowGlitch
-
-### 🍮 Jelly
-
-- jelly
-- jellyX
-- jellyY
-- jellyIn
-- jellyOut
-
-### 🌑 Shadow / Spin / Swing / Orbit
-
-- shadow
-- shadowText
-- shadowPulse
-- shadowNeon
-- spin
-- spin3D
-- spinX
-- spinBounce
-- swing
-- swingPivot
-- swingX
-- swingY
-- orbit
-- orbitEllipse
-
-### 💓 Pulse
-
-- pulse
-- pulseInOut
-- pulseFade
-- pulseFast
-- pulseColor
-
-### 🌫 Fade
-
-- fadeIn
-- fadeOut
-- fadeInFromLeft
-- fadeInFromRight
-- fadeInFromTop
-- fadeInFromBottom
-- fadeOutToLeft
-- fadeOutToRight
-- fadeOutToTop
-- fadeOutToBottom
-- fadeInZoom
-- fadeOutZoom
-- fadeInRotate
-- fadeOutRotate
-- fadeInSkew
-- fadeOutSkew
-- fadeInFlipX
-- fadeOutFlipX
-- fadeInFlipY
-- fadeOutFlipY
-- fadeInPerspective
-- fadeOutPerspective
-
-### 🤯 Squeeze / Shake
-
-- squeezeMix
-- squeezeHorizontal
-- squeezeVertical
-- squeezeDiagonal
-- squeezePulse
-- shakeMix
-- shakeHorizontal
-- shakeVertical
-- shakeDiagonal
-- shakeQuick
-
-### 📥 Slide
-
-- slideInFromLeft
-- slideInFromRight
-- slideOutToLeft
-- slideOutToRight
-- slideInFromTop
-- slideInFromBottom
-- slideOutToTop
-- slideOutToBottom
-- slideInFromLeftOvershoot
-- slideInFromRightOvershoot
-- slideOutToLeftOvershoot
-- slideOutToRightOvershoot
-- slideInFromTopOvershoot
-- slideInFromBottomOvershoot
-- slideOutToTopOvershoot
-- slideOutToBottomOvershoot
-
-### 🔄 Flip
-
-- flip
-- flipIn
-- flipOut
-- flipSlowDown
-- flipToLeft
-- flipToRight
-- flipFromTop
-- flipToTop
-- flipToBottom
-- flipFromBottom
-- flipFromLeftToCenter
-- flipFromRightToCenter
-- flipRich
-- flipToTopRich
-- flipToBottomRich
-- flipToTopLeftRich
-- flipToRightRich
-- flipFromTopRich
-- flipFromBottomRich
-- flipFromLeftToCenterRich
-- flipFromRightToCenterRich
-
-### 📂 Fold / Unfold
-
-- fold
-- foldDeep
-- unfold
-- unfoldDeep
-
-### 🪝 Hang On
-
-- hangOnLeft
-- hangOnRight
-- hangOnTop
-- hangOnBottom
-- hangOnLeftSwing
-- hangOnRightSwing
-- hangOnTopSwing
-- hangOnBottomSwing
-- hangOnOscillate
-- hangOnDrop
-
-### 🔍 Zoom
-
-- zoomIn
-- zoomOut
-- zoomInFromLeft
-- zoomInFromRight
-- zoomInFromTop
-- zoomInFromBottom
-- zoomOutToLeft
-- zoomOutToRight
-- zoomOutToTop
-- zoomOutToBottom
-
-### 🌀 Rotate
-
-- rotateCW
-- rotateACW
-- rotateSlowDown
-- rotateX
-- rotateY
-- rotateFromLeft
-- rotateFromRight
-- rotateToLeft
-- rotateToRight
-- rotateFromTop
-- rotateFromBottom
-- rotateToTop
-- rotateToBottom
-
-### 🎉 Fun / Attention
-
-- heartBeat
-- tada
-- hinge
-- lightSpeedInLeft
-- lightSpeedOutRight
-- popIn
-- popOut
-- popBounceIn
-- popBounceOut
-- popUpIn
-- popUpOut
-- popRotateIn
-- popRotateOut
-- popBlurIn
-- popBlurOut
-- popLeftIn
-- popLeftOut
-- popRightIn
-- popRightOut
-- rubberBand
-- jello
-- wobble
-- rollIn
-- jackInTheBox
+| Prop        | Type                   | Default                      | Description                                                                              |
+| ----------- | ---------------------- | -----------------------------| ---------------------------------------------------------------------------------------- |
+| `type`      | `AnimateType`          | `'blurIn'`                   | Animation name (ví dụ: `'blurIn'`, `'bounce'`, `'fadeOut'`, ...)                         |
+| `duration`  | `string \| number`     | `'defaultDurationMap'`       | Duration of the animation (can be in seconds `'1s'` or milliseconds `1000`)              |
+| `timing`    | `TimingKey`            | `'ease'`                     | Timing function (e.g., `'ease'`, `'linear'`, `'ease-in'`, `'ease-out'`)                  |
+| `delay`     | `string \| number`     | `'0s'`                       | Delay before the animation starts                                                        |
+| `iteration` | `number \| "infinite"` | `1`                          | Repeat count of the animation                                                            |
+| `direction` | `string`               | `'normal'`                   | Animation direction (`'normal'`, `'alternate'`, `'reverse'`, etc.)                       |
+| `fillMode`  | `string`               | `'forwards'`                 | How styles are applied after animation (`'forwards'`, `'backwards'`, `'both'`, `'none'`) |
+| `tagName`   | `string`               | `'div'`                      | Custom HTML tag to render                                                                |
 
 ---
 
@@ -370,6 +129,267 @@ const AnimationChain: React.FC = () => {
 
 export default AnimationChain;
 ```
+
+---
+
+## 🎨 Available Animations
+
+#### 🎾 Bounce
+
+- bounce
+- bounceIn
+- bounceOut
+- bounceElastic
+- bounceSmall
+- bounceRotate
+- bounceJelly
+
+#### ✨ Text / Glow Effects
+
+- effect3D
+- neonGlow
+- retro3D
+- emboss
+- fireGlow
+- iceGlow
+- shine
+
+#### 🌫 Blur
+
+- blurIn
+- blurInZoom
+- blurInScale
+- blurInUp
+- blurInRotate
+- blurOut
+- blurOutZoom
+- blurOutScale
+- blurOutDown
+- blurOutRotate
+
+#### ⚡ Flash
+
+- flash
+- flashIrregular
+- flashFast
+- flashSlow
+- flashPulse
+
+#### 🎈 Float
+
+- float
+- floatSway
+- floatHorizontal
+- floatCircular
+- floatWiggle
+
+#### 💡 Glow
+
+- glow
+- glowTextFlicker
+- glowRainbow
+- glowBreathing
+- glowGlitch
+
+#### 🍮 Jelly
+
+- jelly
+- jellyX
+- jellyY
+- jellyIn
+- jellyOut
+
+#### 🌑 Shadow / Spin / Swing / Orbit
+
+- shadow
+- shadowText
+- shadowPulse
+- shadowNeon
+- spin
+- spin3D
+- spinX
+- spinBounce
+- swing
+- swingPivot
+- swingX
+- swingY
+- orbit
+- orbitEllipse
+
+#### 💓 Pulse
+
+- pulse
+- pulseInOut
+- pulseFade
+- pulseFast
+- pulseColor
+
+#### 🌫 Fade
+
+- fadeIn
+- fadeOut
+- fadeInFromLeft
+- fadeInFromRight
+- fadeInFromTop
+- fadeInFromBottom
+- fadeOutToLeft
+- fadeOutToRight
+- fadeOutToTop
+- fadeOutToBottom
+- fadeInZoom
+- fadeOutZoom
+- fadeInRotate
+- fadeOutRotate
+- fadeInSkew
+- fadeOutSkew
+- fadeInFlipX
+- fadeOutFlipX
+- fadeInFlipY
+- fadeOutFlipY
+- fadeInPerspective
+- fadeOutPerspective
+
+#### 🤯 Squeeze / Shake
+
+- squeezeMix
+- squeezeHorizontal
+- squeezeVertical
+- squeezeDiagonal
+- squeezePulse
+- squeezeBounce
+- squeezeElastic
+- squeezeFlash
+- shakeMix
+- shakeHorizontal
+- shakeVertical
+- shakeDiagonal
+- shakeQuick
+- shakeRotate
+- shakeSkew
+- shakeBounce
+- shakeCrazy
+- squeezeThenShakeX
+- shakeYThenSqueeze
+- squeezeShakeCrazy
+
+#### 📥 Slide
+
+- slideInFromLeft
+- slideInFromRight
+- slideOutToLeft
+- slideOutToRight
+- slideInFromTop
+- slideInFromBottom
+- slideOutToTop
+- slideOutToBottom
+- slideInFromLeftOvershoot
+- slideInFromRightOvershoot
+- slideOutToLeftOvershoot
+- slideOutToRightOvershoot
+- slideInFromTopOvershoot
+- slideInFromBottomOvershoot
+- slideOutToTopOvershoot
+- slideOutToBottomOvershoot
+
+#### 🔄 Flip
+
+- flip
+- flipIn
+- flipOut
+- flipSlowDown
+- flipToLeft
+- flipToRight
+- flipFromTop
+- flipToTop
+- flipToBottom
+- flipFromBottom
+- flipFromLeftToCenter
+- flipFromRightToCenter
+- flipRich
+- flipToTopRich
+- flipToBottomRich
+- flipToTopLeftRich
+- flipToRightRich
+- flipFromTopRich
+- flipFromBottomRich
+- flipFromLeftToCenterRich
+- flipFromRightToCenterRich
+
+#### 📂 Fold / Unfold
+
+- fold
+- foldDeep
+- unfold
+- unfoldDeep
+
+#### 🪝 Hang On
+
+- hangOnLeft
+- hangOnRight
+- hangOnTop
+- hangOnBottom
+- hangOnLeftSwing
+- hangOnRightSwing
+- hangOnTopSwing
+- hangOnBottomSwing
+- hangOnOscillate
+- hangOnDrop
+
+#### 🔍 Zoom
+
+- zoomIn
+- zoomOut
+- zoomInFromLeft
+- zoomInFromRight
+- zoomInFromTop
+- zoomInFromBottom
+- zoomOutToLeft
+- zoomOutToRight
+- zoomOutToTop
+- zoomOutToBottom
+
+#### 🌀 Rotate
+
+- rotateCW
+- rotateACW
+- rotateSlowDown
+- rotateX
+- rotateY
+- rotateFromLeft
+- rotateFromRight
+- rotateToLeft
+- rotateToRight
+- rotateFromTop
+- rotateFromBottom
+- rotateToTop
+- rotateToBottom
+
+#### 🎉 Fun / Attention
+
+- heartBeat
+- tada
+- hinge
+- lightSpeedInLeft
+- lightSpeedOutRight
+- popIn
+- popOut
+- popBounceIn
+- popBounceOut
+- popUpIn
+- popUpOut
+- popRotateIn
+- popRotateOut
+- popBlurIn
+- popBlurOut
+- popLeftIn
+- popLeftOut
+- popRightIn
+- popRightOut
+- rubberBand
+- jello
+- wobble
+- rollIn
+- jackInTheBox
 
 ## 📜 License
 

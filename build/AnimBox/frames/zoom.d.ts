@@ -9,4 +9,12 @@ export declare const zoomMap: {
     zoomOutToRight: import("styled-components/dist/models/Keyframes").default;
     zoomOutToTop: import("styled-components/dist/models/Keyframes").default;
     zoomOutToBottom: import("styled-components/dist/models/Keyframes").default;
+    zoomInRotate: import("styled-components/dist/models/Keyframes").default;
+    zoomOutRotate: import("styled-components/dist/models/Keyframes").default;
+    zoomInFlipX: import("styled-components/dist/models/Keyframes").default;
+    zoomOutFlipX: import("styled-components/dist/models/Keyframes").default;
+    zoomInFlipY: import("styled-components/dist/models/Keyframes").default;
+    zoomOutFlipY: import("styled-components/dist/models/Keyframes").default;
+    zoomPulse: import("styled-components/dist/models/Keyframes").default;
+    zoomSwing: import("styled-components/dist/models/Keyframes").default;
 };

@@ -21,4 +21,14 @@ export declare const fadeMap: {
     fadeOutFlipY: import("styled-components/dist/models/Keyframes").default;
     fadeInPerspective: import("styled-components/dist/models/Keyframes").default;
     fadeOutPerspective: import("styled-components/dist/models/Keyframes").default;
+    fadeInBlur: import("styled-components/dist/models/Keyframes").default;
+    fadeOutBlur: import("styled-components/dist/models/Keyframes").default;
+    fadeInColor: import("styled-components/dist/models/Keyframes").default;
+    fadeOutColor: import("styled-components/dist/models/Keyframes").default;
+    fadePulse: import("styled-components/dist/models/Keyframes").default;
+    fadeBounce: import("styled-components/dist/models/Keyframes").default;
+    fadeSwing: import("styled-components/dist/models/Keyframes").default;
+    fadeZoomRotate: import("styled-components/dist/models/Keyframes").default;
+    fadeElastic: import("styled-components/dist/models/Keyframes").default;
+    fadeShine: import("styled-components/dist/models/Keyframes").default;
 };

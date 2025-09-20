@@ -46,6 +46,14 @@ export declare const animFramesMaps: {
     readonly zoomOutToRight: import("styled-components/dist/models/Keyframes").default;
     readonly zoomOutToTop: import("styled-components/dist/models/Keyframes").default;
     readonly zoomOutToBottom: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomInRotate: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomOutRotate: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomInFlipX: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomOutFlipX: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomInFlipY: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomOutFlipY: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomPulse: import("styled-components/dist/models/Keyframes").default;
+    readonly zoomSwing: import("styled-components/dist/models/Keyframes").default;
     readonly hangOnLeft: import("styled-components/dist/models/Keyframes").default;
     readonly hangOnRight: import("styled-components/dist/models/Keyframes").default;
     readonly hangOnTop: import("styled-components/dist/models/Keyframes").default;
@@ -57,9 +65,17 @@ export declare const animFramesMaps: {
     readonly hangOnOscillate: import("styled-components/dist/models/Keyframes").default;
     readonly hangOnDrop: import("styled-components/dist/models/Keyframes").default;
     readonly fold: import("styled-components/dist/models/Keyframes").default;
-    readonly foldDeep: import("styled-components/dist/models/Keyframes").default;
     readonly unfold: import("styled-components/dist/models/Keyframes").default;
+    readonly foldDeep: import("styled-components/dist/models/Keyframes").default;
     readonly unfoldDeep: import("styled-components/dist/models/Keyframes").default;
+    readonly foldLeft: import("styled-components/dist/models/Keyframes").default;
+    readonly unfoldLeft: import("styled-components/dist/models/Keyframes").default;
+    readonly foldRight: import("styled-components/dist/models/Keyframes").default;
+    readonly unfoldRight: import("styled-components/dist/models/Keyframes").default;
+    readonly foldUp: import("styled-components/dist/models/Keyframes").default;
+    readonly unfoldUp: import("styled-components/dist/models/Keyframes").default;
+    readonly foldDown: import("styled-components/dist/models/Keyframes").default;
+    readonly unfoldDown: import("styled-components/dist/models/Keyframes").default;
     readonly flip: import("styled-components/dist/models/Keyframes").default;
     readonly flipIn: import("styled-components/dist/models/Keyframes").default;
     readonly flipOut: import("styled-components/dist/models/Keyframes").default;
@@ -102,11 +118,21 @@ export declare const animFramesMaps: {
     readonly squeezeVertical: import("styled-components/dist/models/Keyframes").default;
     readonly squeezeDiagonal: import("styled-components/dist/models/Keyframes").default;
     readonly squeezePulse: import("styled-components/dist/models/Keyframes").default;
+    readonly squeezeBounce: import("styled-components/dist/models/Keyframes").default;
+    readonly squeezeElastic: import("styled-components/dist/models/Keyframes").default;
+    readonly squeezeFlash: import("styled-components/dist/models/Keyframes").default;
     readonly shakeMix: import("styled-components/dist/models/Keyframes").default;
     readonly shakeHorizontal: import("styled-components/dist/models/Keyframes").default;
     readonly shakeVertical: import("styled-components/dist/models/Keyframes").default;
     readonly shakeDiagonal: import("styled-components/dist/models/Keyframes").default;
     readonly shakeQuick: import("styled-components/dist/models/Keyframes").default;
+    readonly shakeRotate: import("styled-components/dist/models/Keyframes").default;
+    readonly shakeSkew: import("styled-components/dist/models/Keyframes").default;
+    readonly shakeBounce: import("styled-components/dist/models/Keyframes").default;
+    readonly shakeCrazy: import("styled-components/dist/models/Keyframes").default;
+    readonly squeezeThenShakeX: import("styled-components/dist/models/Keyframes").default;
+    readonly shakeYThenSqueeze: import("styled-components/dist/models/Keyframes").default;
+    readonly squeezeShakeCrazy: import("styled-components/dist/models/Keyframes").default;
     readonly fadeIn: import("styled-components/dist/models/Keyframes").default;
     readonly fadeOut: import("styled-components/dist/models/Keyframes").default;
     readonly fadeInFromLeft: import("styled-components/dist/models/Keyframes").default;
@@ -129,6 +155,16 @@ export declare const animFramesMaps: {
     readonly fadeOutFlipY: import("styled-components/dist/models/Keyframes").default;
     readonly fadeInPerspective: import("styled-components/dist/models/Keyframes").default;
     readonly fadeOutPerspective: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeInBlur: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeOutBlur: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeInColor: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeOutColor: import("styled-components/dist/models/Keyframes").default;
+    readonly fadePulse: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeBounce: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeSwing: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeZoomRotate: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeElastic: import("styled-components/dist/models/Keyframes").default;
+    readonly fadeShine: import("styled-components/dist/models/Keyframes").default;
     readonly pulse: import("styled-components/dist/models/Keyframes").default;
     readonly pulseInOut: import("styled-components/dist/models/Keyframes").default;
     readonly pulseFade: import("styled-components/dist/models/Keyframes").default;
@@ -163,11 +199,21 @@ export declare const animFramesMaps: {
     readonly floatHorizontal: import("styled-components/dist/models/Keyframes").default;
     readonly floatCircular: import("styled-components/dist/models/Keyframes").default;
     readonly floatWiggle: import("styled-components/dist/models/Keyframes").default;
+    readonly floatPulse: import("styled-components/dist/models/Keyframes").default;
+    readonly floatDiagonal: import("styled-components/dist/models/Keyframes").default;
+    readonly floatSwing: import("styled-components/dist/models/Keyframes").default;
+    readonly floatWave: import("styled-components/dist/models/Keyframes").default;
+    readonly floatDrift: import("styled-components/dist/models/Keyframes").default;
     readonly flash: import("styled-components/dist/models/Keyframes").default;
     readonly flashIrregular: import("styled-components/dist/models/Keyframes").default;
     readonly flashFast: import("styled-components/dist/models/Keyframes").default;
     readonly flashSlow: import("styled-components/dist/models/Keyframes").default;
     readonly flashPulse: import("styled-components/dist/models/Keyframes").default;
+    readonly flashGlow: import("styled-components/dist/models/Keyframes").default;
+    readonly flashColor: import("styled-components/dist/models/Keyframes").default;
+    readonly flashStrobe: import("styled-components/dist/models/Keyframes").default;
+    readonly flashSoft: import("styled-components/dist/models/Keyframes").default;
+    readonly flashReversePulse: import("styled-components/dist/models/Keyframes").default;
     readonly blurIn: import("styled-components/dist/models/Keyframes").default;
     readonly blurInZoom: import("styled-components/dist/models/Keyframes").default;
     readonly blurInScale: import("styled-components/dist/models/Keyframes").default;
@@ -192,9 +238,18 @@ export declare const animFramesMaps: {
     readonly bounceSmall: import("styled-components/dist/models/Keyframes").default;
     readonly bounceRotate: import("styled-components/dist/models/Keyframes").default;
     readonly bounceJelly: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceSide: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceDiagonal: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceFlip: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceFade: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceCrazy: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceGlow: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceFadeScale: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceSparkle: import("styled-components/dist/models/Keyframes").default;
+    readonly bounceRainbow: import("styled-components/dist/models/Keyframes").default;
 };
 export type AnimateType = keyof typeof animFramesMaps;
-export declare const animNames: ("rubberBand" | "jello" | "wobble" | "rollIn" | "jackInTheBox" | "popIn" | "popOut" | "popBounceIn" | "popBounceOut" | "popUpIn" | "popUpOut" | "popRotateIn" | "popRotateOut" | "popBlurIn" | "popBlurOut" | "popLeftIn" | "popLeftOut" | "popRightIn" | "popRightOut" | "heartBeat" | "tada" | "hinge" | "lightSpeedInLeft" | "lightSpeedOutRight" | "rotateCW" | "rotateACW" | "rotateSlowDown" | "rotateX" | "rotateY" | "rotateFromLeft" | "rotateFromRight" | "rotateToLeft" | "rotateToRight" | "rotateFromTop" | "rotateFromBottom" | "rotateToTop" | "rotateToBottom" | "zoomIn" | "zoomOut" | "zoomInFromLeft" | "zoomInFromRight" | "zoomInFromTop" | "zoomInFromBottom" | "zoomOutToLeft" | "zoomOutToRight" | "zoomOutToTop" | "zoomOutToBottom" | "hangOnLeft" | "hangOnRight" | "hangOnTop" | "hangOnBottom" | "hangOnLeftSwing" | "hangOnRightSwing" | "hangOnTopSwing" | "hangOnBottomSwing" | "hangOnOscillate" | "hangOnDrop" | "fold" | "foldDeep" | "unfold" | "unfoldDeep" | "flip" | "flipIn" | "flipOut" | "flipSlowDown" | "flipToLeft" | "flipToRight" | "flipFromTop" | "flipToTop" | "flipToBottom" | "flipFromBottom" | "flipFromLeftToCenter" | "flipFromRightToCenter" | "flipRich" | "flipToTopRich" | "flipToBottomRich" | "flipToTopLeftRich" | "flipToRightRich" | "flipFromTopRich" | "flipFromBottomRich" | "flipFromLeftToCenterRich" | "flipFromRightToCenterRich" | "slideInFromLeft" | "slideInFromRight" | "slideOutToLeft" | "slideOutToRight" | "slideInFromTop" | "slideInFromBottom" | "slideOutToTop" | "slideOutToBottom" | "slideInFromLeftOvershoot" | "slideInFromRightOvershoot" | "slideOutToLeftOvershoot" | "slideOutToRightOvershoot" | "slideInFromTopOvershoot" | "slideInFromBottomOvershoot" | "slideOutToTopOvershoot" | "slideOutToBottomOvershoot" | "squeezeMix" | "squeezeHorizontal" | "squeezeVertical" | "squeezeDiagonal" | "squeezePulse" | "shakeMix" | "shakeHorizontal" | "shakeVertical" | "shakeDiagonal" | "shakeQuick" | "fadeIn" | "fadeOut" | "fadeInFromLeft" | "fadeInFromRight" | "fadeInFromTop" | "fadeInFromBottom" | "fadeOutToLeft" | "fadeOutToRight" | "fadeOutToTop" | "fadeOutToBottom" | "fadeInZoom" | "fadeOutZoom" | "fadeInRotate" | "fadeOutRotate" | "fadeInSkew" | "fadeOutSkew" | "fadeInFlipX" | "fadeOutFlipX" | "fadeInFlipY" | "fadeOutFlipY" | "fadeInPerspective" | "fadeOutPerspective" | "pulse" | "pulseInOut" | "pulseFade" | "pulseFast" | "pulseColor" | "shadow" | "shadowText" | "shadowPulse" | "shadowNeon" | "spin" | "spin3D" | "spinX" | "spinBounce" | "swing" | "swingPivot" | "swingX" | "swingY" | "orbit" | "orbitEllipse" | "jelly" | "jellyX" | "jellyY" | "jellyIn" | "jellyOut" | "glow" | "glowTextFlicker" | "glowRainbow" | "glowBreathing" | "glowGlitch" | "float" | "floatSway" | "floatHorizontal" | "floatCircular" | "floatWiggle" | "flash" | "flashIrregular" | "flashFast" | "flashSlow" | "flashPulse" | "blurIn" | "blurInZoom" | "blurInScale" | "blurInUp" | "blurInRotate" | "blurOut" | "blurOutZoom" | "blurOutScale" | "blurOutDown" | "blurOutRotate" | "effect3D" | "neonGlow" | "retro3D" | "emboss" | "fireGlow" | "iceGlow" | "shine" | "bounce" | "bounceIn" | "bounceOut" | "bounceElastic" | "bounceSmall" | "bounceRotate" | "bounceJelly")[];
+export declare const animNames: AnimateType[];
 export declare const timingMap: {
     readonly linear: "linear";
     readonly ease: "ease";
@@ -206,3 +261,79 @@ export declare const timingMap: {
     readonly 'ease-in-out': "ease-in-out";
 };
 export type TimingKeyType = keyof typeof timingMap;
+declare const groupConfig: readonly [{
+    readonly name: "🎾 Bounce";
+    readonly key: "bounce";
+    readonly prefix: "bounce";
+}, {
+    readonly name: "✨ Text / Glow Effects";
+    readonly key: "text";
+    readonly prefix: "effect";
+}, {
+    readonly name: "🌫 Blur";
+    readonly key: "blur";
+    readonly prefix: "blur";
+}, {
+    readonly name: "⚡ Flash";
+    readonly key: "flash";
+    readonly prefix: "flash";
+}, {
+    readonly name: "🎈 Float";
+    readonly key: "float";
+    readonly prefix: "float";
+}, {
+    readonly name: "💡 Glow";
+    readonly key: "glow";
+    readonly prefix: "glow";
+}, {
+    readonly name: "🍮 Jelly";
+    readonly key: "jelly";
+    readonly prefix: "jelly";
+}, {
+    readonly name: "🌑 Shadow / Spin / Swing / Orbit";
+    readonly key: "shadow";
+    readonly prefix: "shadow";
+}, {
+    readonly name: "💓 Pulse";
+    readonly key: "pulse";
+    readonly prefix: "pulse";
+}, {
+    readonly name: "🌫 Fade";
+    readonly key: "fade";
+    readonly prefix: "fade";
+}, {
+    readonly name: "🤯 Squeeze / Shake";
+    readonly key: "shake";
+    readonly prefix: "shake";
+}, {
+    readonly name: "📥 Slide";
+    readonly key: "slide";
+    readonly prefix: "slide";
+}, {
+    readonly name: "🔄 Flip";
+    readonly key: "flip";
+    readonly prefix: "flip";
+}, {
+    readonly name: "📂 Fold / Unfold";
+    readonly key: "fold";
+    readonly prefix: "fold";
+}, {
+    readonly name: "🪝 Hang On";
+    readonly key: "hangOn";
+    readonly prefix: "hangOn";
+}, {
+    readonly name: "🔍 Zoom";
+    readonly key: "zoom";
+    readonly prefix: "zoom";
+}, {
+    readonly name: "🌀 Rotate";
+    readonly key: "rotate";
+    readonly prefix: "rotate";
+}, {
+    readonly name: "🎉 Fun / Attention";
+    readonly key: "fun";
+    readonly prefix: "";
+}];
+type GroupKey = (typeof groupConfig)[number]["key"];
+export declare const animGroups: Record<GroupKey, AnimateType[]>;
+export {};
