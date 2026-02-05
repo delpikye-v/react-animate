@@ -1,50 +1,43 @@
-# 📦 react-animate-z
 
-<div align="center">
-  <b>✨ Simple React animation components built with styled-components</b>.
-  <br />
-  <br />
-  <a href="https://www.npmjs.com/package/react-animate-z">react-animate-z</a>
-  <br />
-  <br />
-  <b><a href="https://codesandbox.io/p/devbox/lively-night-lrjs4s">LIVE EXAMPLE</a></b>
-</div>
+# 🎞️ react-animate-z
 
-<br />
+[![NPM](https://img.shields.io/npm/v/react-animate-z.svg)](https://www.npmjs.com/package/react-animate-z) ![Downloads](https://img.shields.io/npm/dt/react-animate-z.svg)
 
-[![NPM](https://img.shields.io/npm/v/react-animate-z.svg)](https://www.npmjs.com/package/react-animate-z)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![Downloads](https://img.shields.io/npm/dt/react-animate-z.svg)
+<a href="https://codesandbox.io/p/devbox/lively-night-lrjs4s" target="_blank">LIVE EXAMPLE</a>
 
-A React + styled-components based animation library with more than
-**180+ pre-built animations**.
 
-## 🚀 Features
+A lightweight, UX-first animation library for React.
 
-✅ Easy-to-use animation wrapper for any element
+**react-animate-z** provides a clean imperative + declarative API to orchestrate animations
 
-✅ Fully typed with TypeScript
+---
 
-✅ Customizable duration, delay, iteration, timing, direction, fillMode
+## ✨ Why react-animate-z
 
-✅ Typewriter-style text animation with blinking cursor
+- 🚀 180+ prebuilt animations
+- 🧠 Semantic UX states (loading / success / error)
+- ⛓️ Timeline API (sequence, parallel, wait)
+- 🎯 Ref-based animation (no wrapper required)
+- 🎲 Random & playful animation hooks
+- ♿ Reduced-motion safe
+- 🧩 Fully typed with TypeScript
 
-## 🚀 Installation
+---
+
+## 📦 Installation
 
 ```bash
 npm install react-animate-z
-
 # or
-
 yarn add react-animate-z
 ```
 
-## 🎬 Usage
+---
+
+## 🚀 Basic Usage (Declarative)
 
 ```tsx
-import React from "react";
 import Animate from "react-animate-z";
-import { animGroups, animNames } from "react-animate-z";
 
 export default function App() {
   return (
@@ -55,342 +48,259 @@ export default function App() {
 }
 ```
 
-```tsx
-// 1. Get all animation names
-import { animGroups, animNames } from "react-animate-z";
+## 🎛️ Animation Catalog
+```ts
+import { animNames, animGroups } from "react-animate-z";
 
-// 2. Get animation groups
-console.log(animNames);
-console.log(animGroups);
+console.log(animNames);   // all animation names
+console.log(animGroups); // grouped by category
+
 ```
-
-## 🔧 Props
-
-Prop Type Default Description
-
-| Prop        | Type                   | Default                      | Description                                                                              |
-| ----------- | ---------------------- | -----------------------------| ---------------------------------------------------------------------------------------- |
-| `type`      | `AnimateType`          | `'blurIn'`                   | Animation name (ví dụ: `'blurIn'`, `'bounce'`, `'fadeOut'`, ...)                         |
-| `duration`  | `string \| number`     | `'defaultDurationMap'`       | Duration of the animation (can be in seconds `'1s'` or milliseconds `1000`)              |
-| `timing`    | `TimingKey`            | `'ease'`                     | Timing function (e.g., `'ease'`, `'linear'`, `'ease-in'`, `'ease-out'`)                  |
-| `delay`     | `string \| number`     | `'0s'`                       | Delay before the animation starts                                                        |
-| `iteration` | `number \| "infinite"` | `1`                          | Repeat count of the animation                                                            |
-| `direction` | `string`               | `'normal'`                   | Animation direction (`'normal'`, `'alternate'`, `'reverse'`, etc.)                       |
-| `fillMode`  | `string`               | `'forwards'`                 | How styles are applied after animation (`'forwards'`, `'backwards'`, `'both'`, `'none'`) |
-| `tagName`   | `string`               | `'div'`                      | Custom HTML tag to render                                                                |
 
 ---
 
-#### Chain Animation
+## 🔧 `Animate` Props
 
-An string-arry of animation names is used to wrap the animations you want to chain.
+| Prop        | Type                   | Default     | Description         |
+|-------------|------------------------|-------------|---------------------|
+| `type`      | `AnimateType`          | `blurIn`    | Animation name      |
+| `duration`  | `string \| number`     | preset map  | `'1s'` or `1000`    |
+| `timing`    | `TimingKey`            | `ease`      | CSS timing function |
+| `delay`     | `string \| number`     | `0s`        | Delay before start  |
+| `iteration` | `number \| "infinite"` | `1`         | Repeat count        |
+| `direction` | `string`               | `normal`    | Animation direction |
+| `fillMode`  | `string`               | `forwards`  | CSS fill-mode       |
+| `tagName`   | `string`               | `div`       | Rendered HTML tag   |
 
-```js
-import React, { useState } from "react";
-import { AnimateTyping } from "react-animate-z";
+---
 
-const AnimationsForChaining = [
-  "swing",
-  "flipSlowDown",
-  "fadeOutToBottom",
-  "jelly",
-];
+## 🎯 Ref-based Animation (Imperative)
 
-const AnimationChain: React.FC = () => {
-  // const [animationIndex, setAnimationIndex] = useState(0);
-  // const [animationType, setAnimationType] = useState(AnimationsForChaining[0]);
+```tsx
+import { useAnimate } from "react-animate-z";
 
-  // const handleChainAnimation = () => {
-  //   const nextIndex = (animationIndex + 1) % AnimationsForChaining.length;
-  //   setAnimationIndex(nextIndex);
-  //   setAnimationType(AnimationsForChaining[nextIndex]);
-  // };
+function Box() {
+  const { ref, play } = useAnimate<HTMLDivElement>();
 
   return (
-    <>
-      <AnimateTyping
-        heading="Hello,"
-        dataText={["I am Delpi", "I build animations", "I love coding!"]}
-        cursorColor="red"
-      />
-
-      <AnimateTyping dataText="Only once" />
-
-      <AnimateTyping
-        heading="Fast typing:"
-        dataText={["speed x2", "super fast!"]}
-        typingSpeed={50}
-        deletingSpeed={20}
-        pauseTime={1000}
-      />
-    </>
+    <div ref={ref} onClick={() => play("pulse")}>
+      Click me
+    </div>
   );
-};
-
-export default AnimationChain;
+}
 ```
 
 ---
 
-## 🎨 Available Animations
+## ⛓️ Timeline API
 
-#### 🎾 Bounce
+Compose animations as clear motion flows, not nested callbacks.
 
-- bounce
-- bounceIn
-- bounceOut
-- bounceElastic
-- bounceSmall
-- bounceRotate
-- bounceJelly
+```tsx
+import { useAnimate } from "react-animate-z";
+import { useEffect } from "react";
 
-#### ✨ Text / Glow Effects
+function Example() {
+  const { ref, sequence } = useAnimate<HTMLDivElement>();
 
-- effect3D
-- neonGlow
-- retro3D
-- emboss
-- fireGlow
-- iceGlow
-- shine
+  useEffect(() => {
+    sequence()
+      .animate("fadeInFromBottom")
+      .wait(300)
+      .animate("pulse");
+  }, []);
 
-#### 🌫 Blur
+  return <div ref={ref}>Hello</div>;
+}
+```
 
-- blurIn
-- blurInZoom
-- blurInScale
-- blurInUp
-- blurInRotate
-- blurOut
-- blurOutZoom
-- blurOutScale
-- blurOutDown
-- blurOutRotate
+---
 
-#### ⚡ Flash
+## 🧠 Semantic Recipes (State-driven UX)
 
-- flash
-- flashIrregular
-- flashFast
-- flashSlow
-- flashPulse
+```tsx
+import { useRecipe } from "react-animate-z";
 
-#### 🎈 Float
+function SaveButton() {
+  const anim = useRecipe();
 
-- float
-- floatSway
-- floatHorizontal
-- floatCircular
-- floatWiggle
+  return (
+    <button
+      ref={anim.ref}
+      onClick={async () => {
+        anim.loading();
+        await save();
+        anim.success();
+      }}
+    >
+      Save
+    </button>
+  );
+}
+```
 
-#### 💡 Glow
+Available presets:
+- loading()
+- success()
+- error()
+- idle()
 
-- glow
-- glowTextFlicker
-- glowRainbow
-- glowBreathing
-- glowGlitch
+---
 
-#### 🍮 Jelly
+## 🔁 <AnimateOn /> — Trigger by State Change
 
-- jelly
-- jellyX
-- jellyY
-- jellyIn
-- jellyOut
+```ts
+import { AnimateOn } from "react-animate-z";
 
-#### 🌑 Shadow / Spin / Swing / Orbit
+<AnimateOn when={status} value="success" anim={["fadeIn", "pulse"]}>
+  <div>Done!</div>
+</AnimateOn>
 
-- shadow
-- shadowText
-- shadowPulse
-- shadowNeon
-- spin
-- spin3D
-- spinX
-- spinBounce
-- swing
-- swingPivot
-- swingX
-- swingY
-- orbit
-- orbitEllipse
+```
 
-#### 💓 Pulse
+---
 
-- pulse
-- pulseInOut
-- pulseFade
-- pulseFast
-- pulseColor
+## 🧩 AnimateGroup – Staggered Children
 
-#### 🌫 Fade
+```tsx
+import { AnimateGroup } from "react-animate-z";
 
-- fadeIn
-- fadeOut
-- fadeInFromLeft
-- fadeInFromRight
-- fadeInFromTop
-- fadeInFromBottom
-- fadeOutToLeft
-- fadeOutToRight
-- fadeOutToTop
-- fadeOutToBottom
-- fadeInZoom
-- fadeOutZoom
-- fadeInRotate
-- fadeOutRotate
-- fadeInSkew
-- fadeOutSkew
-- fadeInFlipX
-- fadeOutFlipX
-- fadeInFlipY
-- fadeOutFlipY
-- fadeInPerspective
-- fadeOutPerspective
+<AnimateGroup type="fadeInUp" stagger={160}>
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</AnimateGroup>
 
-#### 🤯 Squeeze / Shake
+```
 
-- squeezeMix
-- squeezeHorizontal
-- squeezeVertical
-- squeezeDiagonal
-- squeezePulse
-- squeezeBounce
-- squeezeElastic
-- squeezeFlash
-- shakeMix
-- shakeHorizontal
-- shakeVertical
-- shakeDiagonal
-- shakeQuick
-- shakeRotate
-- shakeSkew
-- shakeBounce
-- shakeCrazy
-- squeezeThenShakeX
-- shakeYThenSqueeze
-- squeezeShakeCrazy
+---
 
-#### 📥 Slide
+## ⌨️ Typing Animation
 
-- slideInFromLeft
-- slideInFromRight
-- slideOutToLeft
-- slideOutToRight
-- slideInFromTop
-- slideInFromBottom
-- slideOutToTop
-- slideOutToBottom
-- slideInFromLeftOvershoot
-- slideInFromRightOvershoot
-- slideOutToLeftOvershoot
-- slideOutToRightOvershoot
-- slideInFromTopOvershoot
-- slideInFromBottomOvershoot
-- slideOutToTopOvershoot
-- slideOutToBottomOvershoot
+```tsx
+import { AnimateTyping } from "react-animate-z";
 
-#### 🔄 Flip
+<AnimateTyping
+  dataText={[
+    "Hello World",
+    "React Animate Z",
+    "Built for UX",
+  ]}
+/>
+```
 
-- flip
-- flipIn
-- flipOut
-- flipSlowDown
-- flipToLeft
-- flipToRight
-- flipFromTop
-- flipToTop
-- flipToBottom
-- flipFromBottom
-- flipFromLeftToCenter
-- flipFromRightToCenter
-- flipRich
-- flipToTopRich
-- flipToBottomRich
-- flipToTopLeftRich
-- flipToRightRich
-- flipFromTopRich
-- flipFromBottomRich
-- flipFromLeftToCenterRich
-- flipFromRightToCenterRich
+---
 
-#### 📂 Fold / Unfold
+## 🎲 Random & Playful Motion
 
-- fold
-- foldDeep
-- unfold
-- unfoldDeep
+```ts
+import { useRandomAnimateNoRepeat } from "react-animate-z";
 
-#### 🪝 Hang On
+const play = useRandomAnimateNoRepeat(run, [
+  "shakeMix",
+  "pulse",
+  "flash",
+  "jelly",
+]);
 
-- hangOnLeft
-- hangOnRight
-- hangOnTop
-- hangOnBottom
-- hangOnLeftSwing
-- hangOnRightSwing
-- hangOnTopSwing
-- hangOnBottomSwing
-- hangOnOscillate
-- hangOnDrop
+<button onClick={() => play()}>Surprise me</button>
 
-#### 🔍 Zoom
+```
 
-- zoomIn
-- zoomOut
-- zoomInFromLeft
-- zoomInFromRight
-- zoomInFromTop
-- zoomInFromBottom
-- zoomOutToLeft
-- zoomOutToRight
-- zoomOutToTop
-- zoomOutToBottom
+---
 
-#### 🌀 Rotate
+## 🪄 AnimatePresence (Enter / Exit)
 
-- rotateCW
-- rotateACW
-- rotateSlowDown
-- rotateX
-- rotateY
-- rotateFromLeft
-- rotateFromRight
-- rotateToLeft
-- rotateToRight
-- rotateFromTop
-- rotateFromBottom
-- rotateToTop
-- rotateToBottom
+`AnimatePresence` animates mount / unmount using enter / exit animation pairs,
+similar to Framer Motion but lighter, CSS-based, and no styled-components dependency.
 
-#### 🎉 Fun / Attention
+#### ✅ Use case
+- Modal
+- Drawer / Sidebar
+- Toast / Snackbar
+- Tooltip
+- Dropdown
+- Conditional UI
+---
 
-- heartBeat
-- tada
-- hinge
-- lightSpeedInLeft
-- lightSpeedOutRight
-- popIn
-- popOut
-- popBounceIn
-- popBounceOut
-- popUpIn
-- popUpOut
-- popRotateIn
-- popRotateOut
-- popBlurIn
-- popBlurOut
-- popLeftIn
-- popLeftOut
-- popRightIn
-- popRightOut
-- rubberBand
-- jello
-- wobble
-- rollIn
-- jackInTheBox
+#### 📌 Basic usage
+
+```tsx
+import { AnimatePresence } from "react-animate-z";
+
+function Example({ open }: { open: boolean }) {
+  return (
+    <AnimatePresence
+      show={open}
+      enter="fadeIn"
+      exit="fadeOut"
+      duration={300}
+    >
+      <div>Hello</div>
+    </AnimatePresence>
+  );
+}
+
+```
+---
+
+#### 🔥 Example: Modal
+
+```tsx
+<AnimatePresence
+  show={open}
+  enter="zoomIn"
+  exit="fadeOut"
+  duration={250}
+>
+  <div className="modal" />
+</AnimatePresence>
+```
+
+---
+
+
+#### 🧠 Behavior timeline
+
+```bash
+show = false
+  └─ nothing rendered
+
+show = true
+  └─ mount
+      └─ enter animation
+
+show = false
+  └─ exit animation
+      └─ wait(duration)
+          └─ unmount
+```
+
+- Declarative intent, not keyframes
+- Timeline-based composition
+- Ref-first, framework-agnostic core
+- Safe defaults for accessibility
+
+---
+
+## 🧩 Additional APIs
+
+#### Components
+- AnimateHost: Low-level animation context host, used for coordinating multiple animated elements.
+- WrapperAnimate: Conditional animation wrapper without breaking DOM structure.
+- TypingText: Lightweight typing animation for inline text (simpler than AnimateTyping).
+
+#### Hooks
+- useAnimateController: Imperative control over animation lifecycle (play, stop, reset).
+- useAnimateSequence: Timeline logic as a hook for reusable animation flows.
+- useRandomAnimateNoRepeat: Random animation helper with no immediate repetition.
+- useRecipe: Semantic, state-driven animation (loading, success, error).
+
+> These APIs are intended for advanced or compositional use cases.
+> Most applications only need <Animate /> and useAnimate().
+
+---
 
 ## 📜 License
 
-MIT © Delpi
+MIT

@@ -1,0 +1,22 @@
+export declare const squeezeShakeMap: {
+    squeezeMix: string;
+    squeezeHorizontal: string;
+    squeezeVertical: string;
+    squeezeDiagonal: string;
+    squeezePulse: string;
+    squeezeBounce: string;
+    squeezeElastic: string;
+    squeezeFlash: string;
+    shakeMix: string;
+    shakeHorizontal: string;
+    shakeVertical: string;
+    shakeDiagonal: string;
+    shakeQuick: string;
+    shakeRotate: string;
+    shakeSkew: string;
+    shakeBounce: string;
+    shakeCrazy: string;
+    squeezeThenShakeX: string;
+    shakeYThenSqueeze: string;
+    squeezeShakeCrazy: string;
+};

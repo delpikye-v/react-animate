@@ -1,0 +1,20 @@
+export declare const zoomMap: {
+    zoomIn: string;
+    zoomOut: string;
+    zoomInFromLeft: string;
+    zoomInFromRight: string;
+    zoomInFromTop: string;
+    zoomInFromBottom: string;
+    zoomOutToLeft: string;
+    zoomOutToRight: string;
+    zoomOutToTop: string;
+    zoomOutToBottom: string;
+    zoomInRotate: string;
+    zoomOutRotate: string;
+    zoomInFlipX: string;
+    zoomOutFlipX: string;
+    zoomInFlipY: string;
+    zoomOutFlipY: string;
+    zoomPulse: string;
+    zoomSwing: string;
+};

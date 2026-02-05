@@ -1,0 +1,23 @@
+export declare const flipMap: {
+    flip: string;
+    flipIn: string;
+    flipOut: string;
+    flipSlowDown: string;
+    flipToLeft: string;
+    flipToRight: string;
+    flipFromTop: string;
+    flipToTop: string;
+    flipToBottom: string;
+    flipFromBottom: string;
+    flipFromLeftToCenter: string;
+    flipFromRightToCenter: string;
+    flipRich: string;
+    flipToTopRich: string;
+    flipToBottomRich: string;
+    flipToTopLeftRich: string;
+    flipToRightRich: string;
+    flipFromTopRich: string;
+    flipFromBottomRich: string;
+    flipFromLeftToCenterRich: string;
+    flipFromRightToCenterRich: string;
+};
