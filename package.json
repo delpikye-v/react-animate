@@ -1,6 +1,6 @@
 {
   "name": "react-animate-z",
-  "version": "3.0.0-z",
+  "version": "3.0.1",
   "description": "Lightweight React animation library with Animate and AnimateTyping components, built using styled-components.",
   "main": "build/index.cjs.js",
   "module": "build/index.esm.js",
